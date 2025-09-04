@@ -102,3 +102,21 @@ console.log(`The average age of the group is ${average_age}`);
 
 /* Part 5 */
 
+// Capitalize first letter of header
+for (let i = 0; i < keys.length; i++) {
+    // slice with string instead of array
+    keys[i] = keys[i].charAt(0).toUpperCase() + keys[i].slice(1);
+}
+
+// Combine header first
+let csvline = keys.join(",");
+
+// Add together as a single string
+for (let i = 0; i < objects.length; i++) {
+    csvline += "\\n" + objects[i].id + "," + 
+    objects[i].name + "," +
+    objects[i].occupation + "," +
+    objects[i].age;
+}
+
+console.log(csvline);
