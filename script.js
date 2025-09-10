@@ -94,7 +94,7 @@ let average_age = 0;
 for (let i = 0; i < objects.length; i++) {
     average_age += parseInt(objects[i].age);
     if (i === objects.length - 1) {
-        average_age / objects.length;
+        average_age /= objects.length;
     }
 }
 console.log(`The average age of the group is ${average_age}`);
